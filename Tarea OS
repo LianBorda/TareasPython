@@ -1,0 +1,259 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPlqkN+lsEFGAYHH/+BjAGz",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/LianBorda/TareasPython/blob/main/Tarea%20OS\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rSsbnXwbKMla"
+      },
+      "source": [
+        "# Tarea OS\n",
+        "  *   Lian Camilo Borda Martinez \n",
+        "  *   Cod: 20191005174\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gNhb-KRSLQu7"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "1.   Verifique la ruta principal\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6M-QY8eTKhNj",
+        "outputId": "bbf56dfd-85a8-4aef-ab2b-8addc4710a90"
+      },
+      "source": [
+        "import os\n",
+        "import sys\n",
+        "\n",
+        "#print(os.name)\n",
+        "#print(sys. platform)\n",
+        "\n",
+        "print(os.getcwd())\n",
+        "print(os.listdir())"
+      ],
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "/content/modulo3\n",
+            "['modulo1', 'comentario3.txt', 'modulo3', 'observaciones', 'modulo2']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pEDVm6EtLanq"
+      },
+      "source": [
+        "\n",
+        "2.     Cree 3 directorios \n",
+        "*   Modulo1, Modulo2, Modulo3\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1yUP2-EULteD",
+        "outputId": "0415edd2-2472-483c-8ab4-c200a2d41db2"
+      },
+      "source": [
+        "os.mkdir('modulo1')\n",
+        "os.mkdir('modulo2')\n",
+        "os.mkdir('modulo3')\n",
+        "os.listdir()"
+      ],
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['.config',\n",
+              " 'modulo1',\n",
+              " 'modulo3',\n",
+              " 'Modulacion',\n",
+              " 'CopiaDeSeguridad',\n",
+              " 'Transicion',\n",
+              " 'modulo2',\n",
+              " 'sample_data']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xt85UcX0MpVK"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "3.  Agrego a cada modulo un archivo(Comentario1, Comentario2,Comentario3,)\n",
+        "y un subdirectorio (Observaciones)\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "LTPN-QREL2tq"
+      },
+      "source": [
+        "file = open('modulo1/comentario1.txt','a+')\n",
+        "os.chdir('modulo1')\n",
+        "\n",
+        "os.mkdir('observaciones')\n",
+        "os.chdir('/content')"
+      ],
+      "execution_count": 19,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "G-lidSm4MjwU"
+      },
+      "source": [
+        "file = open('modulo2/comentario2.txt','a+')\n",
+        "os.chdir('modulo2')\n",
+        "\n",
+        "os.mkdir('observaciones')\n",
+        "os.chdir('/content')"
+      ],
+      "execution_count": 22,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Sqd156NtMl0j"
+      },
+      "source": [
+        "file = open('modulo3/comentario3.txt','a+')\n",
+        "os.chdir('modulo3')\n",
+        "\n",
+        "os.mkdir('observaciones')\n",
+        "os.chdir('/content')"
+      ],
+      "execution_count": 28,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fTZ39VkMNDPp"
+      },
+      "source": [
+        "\n",
+        "\n",
+        "4.   Renombro los archivos a Modulacion, Transicion y CopiaDeSeguridad\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "JNe7BnCdNMKz"
+      },
+      "source": [
+        "os.rename('modulo1','Modulacion')\n",
+        "os.rename('modulo2','Transicion')\n",
+        "os.rename('modulo3','CopiaDeSeguridad')"
+      ],
+      "execution_count": 29,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xFxRQacINQsy"
+      },
+      "source": [
+        "* en uno de los tres directorios creo la tupla para la informacion general del mismo"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BqPWFbxRNima",
+        "outputId": "5cddb9ea-be55-49cf-8ba9-1352ca178826"
+      },
+      "source": [
+        "os.stat('CopiaDeSeguridad')"
+      ],
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "os.stat_result(st_mode=16877, st_ino=6815748, st_dev=51, st_nlink=6, st_uid=0, st_gid=0, st_size=4096, st_atime=1629406935, st_mtime=1629406810, st_ctime=1629406945)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 30
+        }
+      ]
+    }
+  ]
+}
