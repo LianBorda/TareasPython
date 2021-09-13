@@ -1,0 +1,41 @@
+*{
+    margin:10px;
+    padding:10px;
+}
+
+body{
+    background-color: LemonChiffon ;
+    font-family:'Times New Roman';
+}
+
+header{
+    height:140px;
+    background-image: url(https://twitter.com/messi10_rey/status/1366967834442620929/photo/1);
+    text-align:center;
+    line-height: 225px;
+  }
+
+#margen{
+    width:70%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:30px;
+    border-radius: 30px;
+}
+
+aside{
+    margin:0px;
+    width: 29%;
+    height: auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    float: right;
+    text-align: justify;
+    line-height: 23px;
+    padding: 6px;
+    border-radius:7px;
+  }
+
+.color{
+    color:Khaki;
+}
