@@ -28,5 +28,5 @@ cv2.imshow("Eroded", imce)
 cv2.imshow("Rectángulo", imdd)
 
 cv2.waitKey(0)
-
+#
 
