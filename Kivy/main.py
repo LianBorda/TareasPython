@@ -22,7 +22,7 @@ class TareaKivyApp(App):
     slide = Slider(orientation='vertical',min=-10, max=10, value=5,value_track=True,value_track_color=(1,1,0,1))
 
     button = Button(text='¡Pasa el semestre!',
-    background_color=(155,0,41,53))
+    background_color=(1,1,41,50))
     button.bind(state=mensaje)
 
     switch = Switch(active=True)
